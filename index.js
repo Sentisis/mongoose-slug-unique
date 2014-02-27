@@ -1,4 +1,3 @@
-
 /**
  * deps
  */
@@ -26,7 +25,7 @@ var slug = require('slug-component');
 module.exports = function(prop, opts){
   return (function slugize(schema){
     var title;
-    schema.add({ slug: String });
+    schema.add({ slug: {type: String, unique:true} });
     schema.pre('save', function(next){
       var self = this;
 
