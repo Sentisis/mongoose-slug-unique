@@ -1,8 +1,8 @@
 {
   "name": "mongoose-slug",
-  "author": "Amir Abu Shareb <yields@icloud.com>",
+  "author": "Richard Cotrina <rcotrina94@gmail.com>",
   "keywords": ["slug", "mongoose"],
-  "version": "1.2.0",
+  "version": "1.2.0.1",
   "dependencies": {
     "slug-component": "1.1.0"
   },
