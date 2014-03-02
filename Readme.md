@@ -1,18 +1,18 @@
+## mongoose-slug-unique
 
-## mongoose-slug
-
-a simple mongoose plugin that populates `.slug` when the given `prop` is set.
+a simple mongoose plugin that populates a Mongoose Schema with `.slug` wich is unique, from one or more existing properties, when the given `prop` is set.
 
 ## installation
 
 ```bash
-$ npm install mongoose-slug
+$ npm install mongoose-slug-unique
 ```
 
 ## Usage
 
 ```js
-var slug = require('mongoose-slug');
+var slug = require('mongoose-slug-unique');
+
 schema.plugin(slug('name'));
 var Song = mongoose.model('Song', schema);
 
@@ -25,6 +25,7 @@ To use different slug candidates pass them as array
 
 ```js
 var slug = require('mongoose-slug');
+
 schema.plugin(slug(['firstName', 'lastName']));
 var Person = mongoose.model('Person', schema);
 
