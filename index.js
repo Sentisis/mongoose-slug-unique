@@ -22,10 +22,12 @@ var slug = require('slug-component');
  * @return {Function}
  */
 
-module.exports = function(prop, opts){
+module.exports = function(prop, required, opts){
   return (function slugize(schema){
+    var required = required||false;
     var title;
-    schema.add({ slug: {type: String, unique:true} });
+
+    schema.add({ slug: {type: String, unique:true, required:required} });
     schema.pre('save', function(next){
       var self = this;
 
