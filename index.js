@@ -47,7 +47,7 @@ module.exports = function(prop, required, opts){
 
       var require = (opts && !opts.required) ? false : true;
       if (require && !title) return next(new Error(prop + ' is required to create a slug'));
-      delete opts.unique // clean opts
+      if (opts) delete opts.unique // clean opts     
       if (title) self.slug = slug(title, opts);
       next();
     });
